@@ -2,8 +2,22 @@
   <h1>Produtos</h1>
 
   <div class="grid">
-    <div class="card" *ngFor="let products of products$ | async">
-      <div></div>
+    <div class="card" *ngFor="let product of products$ | async">
+      <div class="card-header">
+        <div class="card-title">
+          <span>{{ product.name }}</span>
+        </div>
+        <hr class="hr-divider" />
+        <div class="card-subtitle"></div>
+      </div>
+      <div class="card-content"></div>
+      <div class="card-actions">
+        <button class="button edit-button">Editar</button>
+        <button class="button delete-button">Deletar</button>
+      </div>
+      <div class="card-footer">
+        <span>Incluído em: {{ product.date }}</span>
+      </div>
     </div>
   </div>
 </div>
